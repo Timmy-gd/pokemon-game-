@@ -1,0 +1,65 @@
+.battle-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .pokemon-card {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+  }
+  
+  .attack-btn {
+    display: block;
+    margin: 5px auto;
+    padding: 5px 10px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .attack-btn:hover {
+    background-color: #ffaa00;
+  }
+  
+  .chatbox {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #333;
+    background-color: #fff;
+    overflow-y: auto;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .chat-log p {
+    background-color: #e0e0e0;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+  
+  .chat-log p:nth-child(odd) {
+    background-color: #d1f5d3;
+  }
+  
+  .start-btn, .restart-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .start-btn:hover, .restart-btn:hover {
+    background-color: #45a049;
+  }
+  
