@@ -40,13 +40,16 @@ const Battle = () => {
   const [gameState, setGameState] = useState('start');
   const [winner, setWinner] = useState(null);
   const [chatLog, setChatLog] = useState([]);
+  const [loading, setLoading] = useState(true); // ← NEW loading state
 
   useEffect(() => {
     const fetchTeams = async () => {
+      setLoading(true); // ← Start loading
       const player = await Promise.all(Array.from({ length: 6 }, getRandomPokemon));
       const ai = await Promise.all(Array.from({ length: 6 }, getRandomPokemon));
       setPlayerTeam(player);
       setAiTeam(ai);
+      setLoading(false); // ← End loading
     };
     fetchTeams();
   }, []);
@@ -92,6 +95,14 @@ const Battle = () => {
       setGameState('result');
     }
   };
+
+  if (loading) {
+    return (
+      <div className="battle-container">
+        <h1>Loading teams...</h1>
+      </div>
+    );
+  }
 
   if (gameState === 'start') {
     return (
